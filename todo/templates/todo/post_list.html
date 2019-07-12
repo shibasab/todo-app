@@ -1,10 +1,10 @@
-<html>
-    <head>
-        <title>Todo list</title>
-    </head>
+<div>
+    <h1><a href="/">Todo list</a></h1>
+</div>
 
-    <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
-    </body>
-</html>
+{% for post in posts %}
+    <div>
+        <p>・{{ post.title }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
