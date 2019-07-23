@@ -13,6 +13,11 @@ class Post(models.Model):
         blank=True, 
         null=True,
     )
+    achievement = models.IntegerField(
+        verbose_name='達成度',
+        blank=True, 
+        null=True,
+    )
 
     def create(self):
         self.created_date = timezone.now()
