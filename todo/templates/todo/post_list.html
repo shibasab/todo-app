@@ -5,11 +5,14 @@
         <div class="post">
             <div class="date">
                 <p>created: {{ post.created_date }}</p>
-                {% if post.deadline is not None %}
-                deadline: {{ post.deadline }}
+                {% if post.deadline != '' %}
+                    deadline: {{ post.deadline }}
                 {% endif %}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">・{{ post.title }}</a></h1>
+            {% if post.achievement %}
+                <progress value="{{ post.achievement }}" max="100">{{ post.achievement }}%</progress>
+            {% endif %}
         </div>
     {% endfor %}
 {% endblock %}
