@@ -11,7 +11,7 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">・{{ post.title }}</a></h1>
             {% if post.achievement %}
-                <progress value="{{ post.achievement }}" max="100">{{ post.achievement }}%</progress>
+                達成度: <progress value="{{ post.achievement }}" max="100">{{ post.achievement }}%</progress>
             {% endif %}
         </div>
     {% endfor %}
