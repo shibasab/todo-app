@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'todo',
     'accounts.apps.AccountsConfig',
     'bootstrap_datepicker_plus',
+    'widget_tweaks',
 ]
 
 

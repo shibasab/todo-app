@@ -13,5 +13,8 @@
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="fas fa-edit"></span></a>
         <h1>{{ post.title }}</h1>
         <p>{{ post.detail|linebreaksbr }}</p>
+        {% if post.achievement %}
+            達成度: <progress value="{{ post.achievement }}" max="100">{{ post.achievement }}%</progress>
+        {% endif %}
     </div>
 {% endblock %}
