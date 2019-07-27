@@ -5,7 +5,7 @@
         <div class="post">
             <div class="date">
                 <p>created: {{ post.created_date }}</p>
-                {% if post.deadline != '' %}
+                {% if post.deadline is not None and post.deadline != '' %}
                     deadline: {{ post.deadline }}
                 {% endif %}
             </div>

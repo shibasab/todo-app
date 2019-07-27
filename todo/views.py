@@ -3,6 +3,9 @@ from .models import Post
 from django.utils import timezone
 from .forms import PostForm
 
+def home(request):
+    return render(request, 'home.html')
+
 def post_list(request):
     posts = Post.objects.filter(created_date__lte=timezone.now(), user=request.user).order_by('created_date')
     return render(request, 'todo/post_list.html', {'posts': posts})

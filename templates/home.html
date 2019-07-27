@@ -1,28 +1,18 @@
 {% load static %}
 <html>
     <head>
-        <title>Todo list</title>
+        <title>Todo Home</title>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'todo/todo.css' %}">
-        {{ form.media }}
-        
     </head>
-    <body>
-        <div class="page-header">
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="fas fa-plus-square"></span></a>
-            <h1><a href="/posts">Todo list</a></h1>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
+        <body>
+            <div class="page-header">
+                <h1><a href="/accounts/signup">SignUp</a></h1>
             </div>
-        </div>
-    </body>
+        </body>
+    
 </html>
