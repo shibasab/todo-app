@@ -1,3 +1,3 @@
-# todo-app
+# todo-django
 
 ## todoアプリを作成する
